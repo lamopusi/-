@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+float d(float a,float b,float c){
+    return pow(b,2) - 4*a*c;
+}
+int main(){
+	float a,b,c,deerta;
+	double gen1,gen2,gen;
+	printf("请输入a,b,c的值分别为：");
+	scanf("%f,%f,%f",&a,&b,&c);
+	deerta = d(a,b,c);
+	if(deerta < 0){
+		printf("该方程没有实数根");
+	}else if(deerta == 0){
+		gen = (-b) / (2 * a);
+		printf("该方程两个相等的实数解，为：%f",gen);
+					
+	}else if(deerta > 0){
+	   gen1 = ((-b) + sqrt(deerta)) / (2 * a);
+	   gen2 = ((-b) - sqrt(deerta)) / (2 * a);
+	   printf("该方程有两个不相等的实数根，为：%f,%f",gen1,gen2);	
+	}
+	return 0;
+	
+	
+	
+}
+	
